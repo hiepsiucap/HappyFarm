@@ -4,12 +4,16 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import { CheveRon } from "../assets/icon";
+import logo from "../assets/img/logo.png";
 const Layout: React.FC = () => {
   return (
     <div className="">
       <div className=" shadow-2xl ">
-        <nav className=" md:container mx-auto flex justify-between p-6 py-3 ">
-          <ul className="flex space-x-16 p-4 font-lexend items-center text-primary ">
+        <nav className=" md:container mx-auto flex justify-between px-6 ">
+          <ul className="flex space-x-16 px-4  font-lexend items-center text-primary ">
+            <li className=" flex space-x-4 items-center font-medium">
+              <img src={logo} alt="" className=" w-32" />
+            </li>
             <li className=" flex space-x-4 items-center font-medium">
               <Link to="/">Trang chủ</Link>
               <CheveRon size={6}></CheveRon>
@@ -23,13 +27,19 @@ const Layout: React.FC = () => {
               <CheveRon size={6}></CheveRon>
             </li>
           </ul>
-          <div className=" flex items-center font-lexend space-x-2">
-            <button className=" p-2 px-5 text-sm bg-primary font-light border-primary border-2 text-white rounded-xl">
-              Nhận demo
-            </button>
-            <button className=" p-2 px-5 bg-white font-light text-sm text-primary border-2 border-primary rounded-xl">
+          <div className=" flex items-center font-lexend space-x-4">
+            <Link
+              to="/login"
+              className=" p-2 px-5 text-sm bg-primary font-light border-primary border-2 text-white rounded-xl"
+            >
+              Đăng nhập
+            </Link>
+            <Link
+              to="/register"
+              className=" p-2 px-5 bg-white font-light text-sm text-primary border-2 border-primary rounded-xl"
+            >
               Dùng thử miễn phí
-            </button>
+            </Link>
           </div>
         </nav>
       </div>

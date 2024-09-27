@@ -4,7 +4,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { HomePage, ErrorPage, Layout } from "./page";
+import { HomePage, ErrorPage, Layout, Login, Register } from "./page";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -18,6 +18,14 @@ const router = createBrowserRouter([
         element: <HomePage></HomePage>,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login></Login>,
+  },
+  {
+    path: "/register",
+    element: <Register></Register>,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(

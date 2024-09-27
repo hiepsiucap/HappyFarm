@@ -1,4 +1,5 @@
 /** @format */
+import { Link } from "react-router-dom";
 import image1 from "../assets/img/5.png";
 import image2 from "../assets/img/6.png";
 const Hero = () => {
@@ -16,12 +17,18 @@ const Hero = () => {
             soát Quy trình Chăm sóc Khách hàng.
           </p>
           <div className=" flex items-center font-lexend space-x-6 py-4">
-            <button className=" p-4 px-6  bg-primary font-medium border-primary border-2 text-white rounded-md">
+            <Link
+              to="/login"
+              className=" p-4 px-6  bg-primary font-medium border-primary border-2 text-white rounded-md"
+            >
               Nhận demo
-            </button>
-            <button className=" p-4 px-6 bg-white font-medium  text-primary border-2 border-primary rounded-md">
+            </Link>
+            <Link
+              to="/register"
+              className=" p-4 px-6 bg-white font-medium  text-primary border-2 border-primary rounded-md"
+            >
               Dùng thử miễn phí
-            </button>
+            </Link>
           </div>
         </div>
         <div className=" w-1/2  relative">

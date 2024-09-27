@@ -1,3 +1,5 @@
 /** @format */
 import Hero from "./Hero";
-export {Hero}
+import FormLogin from "./FormLogin";
+import FormRegister from "./FormRegister";
+export {Hero, FormLogin , FormRegister}
