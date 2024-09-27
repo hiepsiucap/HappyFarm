@@ -1,5 +1,4 @@
 /** @format */
-import logo from "../assets/img/logo.png";
 import { FormLogin } from "../component";
 const Login = () => {
   return (
