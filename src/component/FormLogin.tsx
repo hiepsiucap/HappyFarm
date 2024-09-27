@@ -30,7 +30,7 @@ const FormLogin = () => {
           </Link>
         </div>
         <div className=" py-10">
-          <button className=" px-6 py-4 rounded-lg w-full  bg-primary text-white font-bold text-sm">
+          <button className=" hover:bg-opacity-75 px-6 py-4 rounded-lg w-full  bg-primary text-white font-bold text-sm">
             Đăng nhập
           </button>
         </div>

@@ -19,13 +19,13 @@ const Hero = () => {
           <div className=" flex items-center font-lexend space-x-6 py-4">
             <Link
               to="/login"
-              className=" p-4 px-6  bg-primary font-medium border-primary border-2 text-white rounded-md"
+              className=" p-4  hover:bg-opacity-85 hover:scale-105 px-6  bg-primary font-medium border-primary border-2 text-white rounded-md"
             >
               Nhận demo
             </Link>
             <Link
               to="/register"
-              className=" p-4 px-6 bg-white font-medium  text-primary border-2 border-primary rounded-md"
+              className=" p-4 px-6 bg-white font-medium  hover:scale-105 text-primary border-2 border-primary rounded-md"
             >
               Dùng thử miễn phí
             </Link>

@@ -5,6 +5,7 @@ import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import { CheveRon } from "../assets/icon";
 import logo from "../assets/img/logo.png";
+import { Footer } from "../component";
 const Layout: React.FC = () => {
   return (
     <div className="">
@@ -30,13 +31,13 @@ const Layout: React.FC = () => {
           <div className=" flex items-center font-lexend space-x-4">
             <Link
               to="/login"
-              className=" p-2 px-5 text-sm bg-primary font-light border-primary border-2 text-white rounded-xl"
+              className=" p-2 hover:scale-105 hover:bg-opacity-90 px-5 text-sm bg-primary font-light border-primary border-2 text-white rounded-xl"
             >
               Đăng nhập
             </Link>
             <Link
               to="/register"
-              className=" p-2 px-5 bg-white font-light text-sm text-primary border-2 border-primary rounded-xl"
+              className=" p-2 px-5 bg-white hover:scale-105  hover:bg-primary hover:text-white hover:border-black hover:bg-opacity-85 hover:border-2 font-light text-sm text-primary border-2 border-primary rounded-xl"
             >
               Dùng thử miễn phí
             </Link>
@@ -46,8 +47,8 @@ const Layout: React.FC = () => {
       <div className="">
         <Outlet />
       </div>
-      <footer className="p-4 text-center bg-gray-200">
-        <p>© 2024 My App</p>
+      <footer className="p-4 text-center bg-button">
+        <Footer></Footer>
       </footer>
     </div>
   );
