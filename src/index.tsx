@@ -4,9 +4,18 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { HomePage, ErrorPage, Layout, Login, Register } from "./page";
+import {
+  HomePage,
+  ErrorPage,
+  Layout,
+  Login,
+  Register,
+  Project,
+  ChooseSub,
+  Projects,
+} from "./page";
+import { ScrollToTop } from "./component";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,6 +25,23 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage></HomePage>,
+      },
+      {
+        path: "/projects",
+        children: [
+          {
+            path: "/projects",
+            element: <Projects></Projects>,
+          },
+          {
+            path: "/projects/:id",
+            element: <Project></Project>,
+          },
+          {
+            path: "/projects/:id/subscription",
+            element: <ChooseSub></ChooseSub>,
+          },
+        ],
       },
     ],
   },
@@ -30,7 +56,7 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>
 );
 

@@ -1,10 +1,12 @@
 /** @format */
 /** @format */
-import { Hero } from "../component";
+import { Hero, ListProject, ListEvent } from "../component";
 function HomePage() {
   return (
     <>
       <Hero></Hero>
+      <ListProject></ListProject>
+      <ListEvent></ListEvent>
       <section className=" h-screen"></section>
     </>
   );

@@ -13,11 +13,18 @@ const Layout: React.FC = () => {
         <nav className=" md:container mx-auto flex justify-between px-6 ">
           <ul className="flex space-x-16 px-4  font-lexend items-center text-primary ">
             <li className=" flex space-x-4 items-center font-medium">
-              <img src={logo} alt="" className=" w-32" />
+              <Link to="/">
+                {" "}
+                <img src={logo} alt="" className=" w-32" />
+              </Link>
             </li>
             <li className=" flex space-x-4 items-center font-medium">
               <Link to="/">Trang chủ</Link>
               <CheveRon size={6}></CheveRon>
+              <li className=" flex space-x-4 items-center font-medium">
+                <Link to="/projects">Dự án</Link>
+                <CheveRon size={6}></CheveRon>
+              </li>
             </li>
             <li className=" flex space-x-4 items-center font-medium">
               <Link to="/about">Sản phẩm</Link>
@@ -44,7 +51,7 @@ const Layout: React.FC = () => {
           </div>
         </nav>
       </div>
-      <div className="">
+      <div className=" bg-white">
         <Outlet />
       </div>
       <footer className="p-4 text-center bg-button">
