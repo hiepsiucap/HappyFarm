@@ -1,6 +1,6 @@
 /** @format */
-import { useParams } from "react-router-dom";
-import { LinearProgress, Box } from "@mui/material";
+// import { useParams } from "react-router-dom";
+import { LinearProgress } from "@mui/material";
 import { styled } from "@mui/system";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -18,7 +18,7 @@ const Project = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const { id } = useParams();
+  //   const { id } = useParams();
   return (
     <section className=" bg-white font-lexend">
       <section className=" mx-auto md:container py-12">

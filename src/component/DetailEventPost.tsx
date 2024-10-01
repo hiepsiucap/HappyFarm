@@ -1,9 +1,9 @@
 /** @format */
 import { Link } from "react-router-dom";
 import ModalCompo from "./Modal";
-const DetailEvent = () => {
+const DetailEventPost = () => {
   return (
-    <div className="rounded-2xl">
+    <div className="rounded-2xl px-4 py-6 shadow-sm bg-background">
       <img
         src="https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727724898/luke-pennystan-09FcOqmi8R0-unsplash_kc6p4n.jpg"
         alt=""
@@ -28,20 +28,13 @@ const DetailEvent = () => {
           những người yêu thích nấu nướng và muốn khám phá cách sử dụng dâu tây
           trong các món tráng miệng.
         </div>
-        <div className=" flex justify-between py-2">
-          <div className=" text-sm font-bold flex flex-col space-y-1">
-            <div>Chi phí 100.000 đồng/ 1 người</div>
-            <Link
-              to="/project "
-              className=" hover:scale-105 hover:underline hover:text-green-500"
-            >
-              Miễn phí cho thành viên
-            </Link>
-          </div>
-          <ModalCompo></ModalCompo>
+        <div className=" flex justify-center py-2">
+          <button className="bg-primary py-2 px-4 rounded-md text-white">
+            Đăng kí ngay
+          </button>
         </div>
       </div>
     </div>
   );
 };
-export default DetailEvent;
+export default DetailEventPost;

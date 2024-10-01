@@ -4,8 +4,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+
 import {
   HomePage,
+  EventList,
   ErrorPage,
   Layout,
   Login,
@@ -13,8 +15,13 @@ import {
   Project,
   ChooseSub,
   Projects,
+  RegisterFarmer,
+  UserLayOut,
+  Events,
+  Community,
+  Orders,
 } from "./page";
-import { ScrollToTop } from "./component";
+// import { ScrollToTop } from "./component";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
@@ -43,11 +50,37 @@ const router = createBrowserRouter([
           },
         ],
       },
+      {
+        path: "/registerfarmer",
+        element: <RegisterFarmer></RegisterFarmer>,
+      },
+      {
+        path: "/events",
+        element: <Events></Events>,
+      },
     ],
   },
   {
     path: "/login",
     element: <Login></Login>,
+  },
+  {
+    path: "/user",
+    element: <UserLayOut></UserLayOut>,
+    children: [
+      {
+        path: "/user/orders",
+        element: <Orders></Orders>,
+      },
+      {
+        path: "/user/events",
+        element: <EventList></EventList>,
+      },
+    ],
+  },
+  {
+    path: "/community",
+    element: <Community></Community>,
   },
   {
     path: "/register",

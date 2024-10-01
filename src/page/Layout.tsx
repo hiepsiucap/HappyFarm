@@ -12,26 +12,30 @@ const Layout: React.FC = () => {
       <div className=" shadow-2xl ">
         <nav className=" md:container mx-auto flex justify-between px-6 ">
           <ul className="flex space-x-16 px-4  font-lexend items-center text-primary ">
-            <li className=" flex space-x-4 items-center font-medium">
+            <li className=" flex space-x-2 items-center font-medium">
               <Link to="/">
                 {" "}
                 <img src={logo} alt="" className=" w-32" />
               </Link>
             </li>
-            <li className=" flex space-x-4 items-center font-medium">
+            <li className=" flex space-x-2 items-center font-medium">
               <Link to="/">Trang chủ</Link>
               <CheveRon size={6}></CheveRon>
-              <li className=" flex space-x-4 items-center font-medium">
-                <Link to="/projects">Dự án</Link>
-                <CheveRon size={6}></CheveRon>
-              </li>
             </li>
-            <li className=" flex space-x-4 items-center font-medium">
-              <Link to="/about">Sản phẩm</Link>
+            <li className=" flex space-x-2 items-center font-medium">
+              <Link to="/projects">Dự án</Link>
               <CheveRon size={6}></CheveRon>
             </li>
-            <li className=" flex space-x-4 items-center font-medium">
-              <Link to="/about">Báo giá</Link>
+            <li className=" flex space-x-2 items-center font-medium">
+              <Link to="/events">Sự kiện</Link>
+              <CheveRon size={6}></CheveRon>
+            </li>
+            <li className=" flex space-x-2 items-center font-medium">
+              <Link to="/registerfarmer">Đối tác</Link>
+              <CheveRon size={6}></CheveRon>
+            </li>
+            <li className=" flex space-x-2 items-center font-medium">
+              <Link to="/community">Cộng đồng</Link>
               <CheveRon size={6}></CheveRon>
             </li>
           </ul>
@@ -46,7 +50,7 @@ const Layout: React.FC = () => {
               to="/register"
               className=" p-2 px-5 bg-white hover:scale-105  hover:bg-primary hover:text-white hover:border-black hover:bg-opacity-85 hover:border-2 font-light text-sm text-primary border-2 border-primary rounded-xl"
             >
-              Dùng thử miễn phí
+              Đăng kí
             </Link>
           </div>
         </nav>

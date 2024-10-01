@@ -1,11 +1,22 @@
 /** @format */
 
 import { Warning } from "../assets/icon";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Subscription } from "../component";
+import { formatPrice } from "../utilize/Price";
 const ChooseSub = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  interface ChooseType {
+    id: string;
+    name: string;
+    benefit: string;
+    img: string;
+    amount: number;
+  }
+  const [choose, changechoose] = useState<ChooseType | null>(null);
+
   return (
     <section className="font-lexend md:container mx-auto py-6">
       <div className=" font-lexend py-6">
@@ -13,86 +24,57 @@ const ChooseSub = () => {
       </div>
       <div className=" flex items-center space-x-8">
         <div className=" flex flex-col space-y-5 w-3/4 ">
-          <button className=" border rounded-lg flex justify-between items-center  shadow-lg  p-5 text-start">
-            <div className=" flex flex-col space-y-2 w-2/3 pr-4">
-              <div className="font-xl">Gói Cơ bản (Basic)- 100.000VNĐ</div>
-              <div className=" font-semibold">Khách hàng cơ bản</div>
-              <div className="text-gray-600 text-sm">
-                Gói cơ bản dành cho những ai mong muốn tham gia vào dự án nông
-                trại dâu với số vốn đầu tư nhỏ, nhưng vẫn nhận được nhiều quyền
-                lợi và lợi ích hấp dẫn từ việc canh tác và thu hoạch dâu. Với
-                gói này, nhà đầu tư sẽ được trải nghiệm mô hình nông nghiệp
-                sạch, bền vững và đồng thời hưởng lợi từ sự phát triển của mô
-                hình trồng dâu công nghệ cao.
-              </div>
-              <div className=" font-bold">Quyền lợi :</div>
-              <ul className=" list-disc px-5 text-sm">
-                <li>2 kg dâu tuơi thu hoạch </li>
-                <li>Thư cảm ơn </li>
-              </ul>
-            </div>
-            <div className=" w-1/3">
-              <img
-                src="https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727711993/461601249_878416460628791_3600121618089984177_n_ycb4gh.jpg"
-                alt=""
-                className=" rounded-md min-h-48"
-              />
-            </div>
-          </button>
-          <button className=" border rounded-lg flex justify-between items-center shadow-lg   p-5 text-start">
-            <div className=" flex flex-col space-y-2 w-2/3 pr-4">
-              <div className="font-xl">Gói Cơ bản (Basic)- 100.000VNĐ</div>
-              <div className=" font-semibold">Khách hàng cơ bản</div>
-              <div className="text-gray-600 text-sm">
-                Gói cơ bản dành cho những ai mong muốn tham gia vào dự án nông
-                trại dâu với số vốn đầu tư nhỏ, nhưng vẫn nhận được nhiều quyền
-                lợi và lợi ích hấp dẫn từ việc canh tác và thu hoạch dâu. Với
-                gói này, nhà đầu tư sẽ được trải nghiệm mô hình nông nghiệp
-                sạch, bền vững và đồng thời hưởng lợi từ sự phát triển của mô
-                hình trồng dâu công nghệ cao.
-              </div>
-              <div className=" font-bold">Quyền lợi :</div>
-              <ul className=" list-disc px-5 text-sm">
-                <li>2 kg dâu tuơi thu hoạch </li>
-                <li>Thư cảm ơn </li>
-              </ul>
-            </div>
-            <div className=" w-1/3">
-              <img
-                src="https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727711993/461601249_878416460628791_3600121618089984177_n_ycb4gh.jpg"
-                alt=""
-                className=" rounded-md min-h-48"
-              />
-            </div>
-          </button>
-          <button className=" border rounded-lg flex justify-between items-center shadow-lg  p-5 text-start">
-            <div className=" flex flex-col space-y-2 w-2/3 pr-4">
-              <div className="font-xl">Gói Cơ bản (Basic)- 100.000VNĐ</div>
-              <div className=" font-semibold">Khách hàng cơ bản</div>
-              <div className="text-gray-600 text-sm">
-                Gói cơ bản dành cho những ai mong muốn tham gia vào dự án nông
-                trại dâu với số vốn đầu tư nhỏ, nhưng vẫn nhận được nhiều quyền
-                lợi và lợi ích hấp dẫn từ việc canh tác và thu hoạch dâu. Với
-                gói này, nhà đầu tư sẽ được trải nghiệm mô hình nông nghiệp
-                sạch, bền vững và đồng thời hưởng lợi từ sự phát triển của mô
-                hình trồng dâu công nghệ cao.
-              </div>
-              <div className=" font-bold">Quyền lợi :</div>
-              <ul className=" list-disc px-5 text-sm">
-                <li>2 kg dâu tuơi thu hoạch </li>
-                <li>Thư cảm ơn </li>
-              </ul>
-            </div>
-            <div className=" w-1/3">
-              <img
-                src="https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727711993/461601249_878416460628791_3600121618089984177_n_ycb4gh.jpg"
-                alt=""
-                className=" rounded-md min-h-48"
-              />
-            </div>
-          </button>
+          <Subscription
+            onChangeChoose={changechoose}
+            choose={choose}
+            id={"1"}
+          ></Subscription>
+          <Subscription
+            onChangeChoose={changechoose}
+            choose={choose}
+            id={"2"}
+          ></Subscription>
+          <Subscription
+            onChangeChoose={changechoose}
+            choose={choose}
+            id={"3"}
+          ></Subscription>
         </div>
         <div className="text-gray-500 text-sm w-1/4 flex flex-col items-center space-y-2 ">
+          {choose && (
+            <section className=" flex flex-col space-y-2">
+              <div className=" text-xl font-bold ">Gói đã chọn</div>
+              <img src={choose.img} alt="" />
+              <h5 className=" py-2 font-bold text-gray-900">{choose?.name}</h5>
+              <p className=" text-gray-600">{choose?.benefit}</p>
+              <div className=" flex justify-between w-full">
+                <p className=" text-gray-600">Giá tiền:</p>
+                <p className=" text-end font-bold">
+                  {formatPrice(choose.amount)}
+                </p>
+              </div>
+              <div className=" flex justify-between w-full">
+                <p className=" text-gray-600">Thuế, phí:</p>
+                <p className=" text-end font-bold">
+                  {formatPrice(choose.amount * 0.1)}
+                </p>
+              </div>
+              <div className=" flex justify-between w-full">
+                <p className=" text-gray-600">Thành tiền:</p>
+                <p className=" text-end font-bold">
+                  {formatPrice(choose.amount * 1.1)}
+                </p>
+              </div>
+              <div className=" flex justify-end">
+                <button
+                  className=" py-2 px-4 bg-primary rounded-md my-2 text-white
+                "
+                >
+                  Thanh toán ngay
+                </button>
+              </div>
+            </section>
+          )}
           <Warning size={6}></Warning>
           <div>
             Khi đầu tư vào dự án trồng cây dâu giống Australia, các nhà đầu tư
