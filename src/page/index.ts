@@ -10,6 +10,7 @@ import EventList from "./EventList";
 import Community from "./Community";
 import Projects from "./Projects";
 import UserLayOut from "./UserLayout";
+import PriceTable from "./PriceTable";
 import Orders from "./Order";
 import RegisterFarmer from "./RegisterFarmer";
-export {HomePage, ErrorPage, UserLayOut, Layout ,Events, Login ,Register, Project, ChooseSub,EventList ,Community,Orders, Projects, RegisterFarmer};
+export {HomePage, ErrorPage, UserLayOut, Layout ,Events, Login ,Register, Project, ChooseSub,EventList,PriceTable ,Community,Orders, Projects, RegisterFarmer};

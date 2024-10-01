@@ -20,6 +20,7 @@ import {
   Events,
   Community,
   Orders,
+  PriceTable,
 } from "./page";
 // import { ScrollToTop } from "./component";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage></HomePage>,
+      },
+      {
+        path: "/price",
+        element: <PriceTable></PriceTable>,
       },
       {
         path: "/projects",

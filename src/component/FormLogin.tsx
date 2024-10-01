@@ -29,10 +29,13 @@ const FormLogin = () => {
             Chưa có tài khoản?
           </Link>
         </div>
-        <div className=" py-10">
-          <button className=" hover:bg-opacity-75 px-6 py-4 rounded-lg w-full  bg-primary text-white font-bold text-sm">
+        <div className=" py-10 flex justify-center items-center">
+          <Link
+            to="/community"
+            className=" hover:bg-opacity-75 px-6 py-4 rounded-lg   bg-primary text-white font-bold text-sm"
+          >
             Đăng nhập
-          </button>
+          </Link>
         </div>
       </form>
     </section>

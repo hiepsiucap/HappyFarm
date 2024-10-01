@@ -35,7 +35,7 @@ const Layout: React.FC = () => {
               <CheveRon size={6}></CheveRon>
             </li>
             <li className=" flex space-x-2 items-center font-medium">
-              <Link to="/community">Cộng đồng</Link>
+              <Link to="/price">Bảng giá</Link>
               <CheveRon size={6}></CheveRon>
             </li>
           </ul>
