@@ -2,7 +2,13 @@
 
 import { useEffect, useState } from "react";
 
-const useIntersectionObserver = (threshold: number = 0) => {
+const useIntersectionObserver = ({
+  threshold = 0,
+  id,
+}: {
+  threshold: number;
+  id: string;
+}) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
@@ -18,7 +24,7 @@ const useIntersectionObserver = (threshold: number = 0) => {
       }
     );
 
-    const element = document.querySelector("#line-chart"); // Phần tử cần quan sát
+    const element = document.querySelector(`#${id}`); // Phần tử cần quan sát
     if (element) {
       observer.observe(element); // Bắt đầu quan sát
     }

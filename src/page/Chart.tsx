@@ -2,7 +2,14 @@
 import { Basic, BasicBar, BasicLine, BasicPie } from "../component";
 import useIntersectionObserver from "../utilz/Observer";
 const Chart = () => {
-  const isLineChartVisible = useIntersectionObserver();
+  const isLineChartVisibleLine = useIntersectionObserver({
+    threshold: 0,
+    id: "line-chart",
+  });
+  const isLineChartVisiblePie = useIntersectionObserver({
+    threshold: 0,
+    id: "pie-chart",
+  });
   const categories = [
     "Tháng 1",
     "Tháng 2",
@@ -64,16 +71,16 @@ const Chart = () => {
             className=" bg-background shadow-sm py-3 px-6 text-sm border border-primary border-opacity-25 rounded-lg"
             id=""
           >
-            <option value="">Dâu Australia</option>
+            <option value="">Buởi Hiệp Đức</option>
             <option value="">Buởi Hiệp Đức</option>
           </select>
         </div>
-        {isLineChartVisible && (
+        {isLineChartVisibleLine && (
           <BasicLine categories={categories} data={data2} data1={data3} />
         )}
       </div>
       <div
-        id="line-chart"
+        id="pie-chart"
         className=" relative z-1 flex flex-col items-center space-x-4 py-8"
       >
         <div className=" text-xl">
@@ -97,7 +104,7 @@ const Chart = () => {
             <option value="">Buởi Hiệp Đức</option>
           </select>
         </div>
-        {isLineChartVisible && <BasicPie categories={cate} data={data1} />}
+        {isLineChartVisiblePie && <BasicPie categories={cate} data={data1} />}
       </div>
     </section>
   );
