@@ -22,5 +22,6 @@ import AdminProject from "./AdminProject";
 import Basic from "./ApexChart";
 import BasicLine from "./LineChart";
 import RecentSubTable from "./RecentSub";
+import BasicPie from "./PieChart";
 import BasicBar from "./BarChat";
-export {Hero,Basic, Post,DetailEventPost,BasicBar,BasicLine,OrderDetail,RecentSubTable,AdminProject, RecentSubEvent,AdminEvent, ModalCompo, FormLogin ,FormRegisterFarmer,ListOfEvents, FormRegister, Footer, ListProject, DetailEvent,Subscription , Project, ScrollToTop ,Filter, ListEvent}
+export {Hero,Basic,BasicPie, Post,DetailEventPost,BasicBar,BasicLine,OrderDetail,RecentSubTable,AdminProject, RecentSubEvent,AdminEvent, ModalCompo, FormLogin ,FormRegisterFarmer,ListOfEvents, FormRegister, Footer, ListProject, DetailEvent,Subscription , Project, ScrollToTop ,Filter, ListEvent}

@@ -1,5 +1,5 @@
 /** @format */
-import { Basic, BasicBar, BasicLine } from "../component";
+import { Basic, BasicBar, BasicLine, BasicPie } from "../component";
 import useIntersectionObserver from "../utilz/Observer";
 const Chart = () => {
   const isLineChartVisible = useIntersectionObserver();
@@ -22,7 +22,7 @@ const Chart = () => {
   const data2 = [30, 40, 50, 40, 30, 40, 80, 85, 100];
   const data3 = [30, 40, 50, 25, 70, 40, 80, 60, 90];
   const cate = [
-    "",
+    "Măng cụt bình dương",
     "Bưởi da xanh",
     "Chè thái nguyên",
     "Sầu riêng Ri6",
@@ -71,6 +71,33 @@ const Chart = () => {
         {isLineChartVisible && (
           <BasicLine categories={categories} data={data2} data1={data3} />
         )}
+      </div>
+      <div
+        id="line-chart"
+        className=" relative z-1 flex flex-col items-center space-x-4 py-8"
+      >
+        <div className=" text-xl">
+          Bảng tổng quan doanh thu các loại trái cây
+        </div>
+        <div className=" flex w-full pr-6 justify-center ml-12 items-center space-x-4 py-8">
+          <select
+            name=""
+            className=" bg-background shadow-sm py-3 px-6 text-sm border border-primary border-opacity-25 rounded-lg"
+            id=""
+          >
+            <option value="">Tháng 9</option>
+            <option value="">Buởi Hiệp Đức</option>
+          </select>
+          <select
+            name=""
+            className=" bg-background shadow-sm py-3 px-6 text-sm border border-primary border-opacity-25 rounded-lg"
+            id=""
+          >
+            <option value="">Năm 2024</option>
+            <option value="">Buởi Hiệp Đức</option>
+          </select>
+        </div>
+        {isLineChartVisible && <BasicPie categories={cate} data={data1} />}
       </div>
     </section>
   );
