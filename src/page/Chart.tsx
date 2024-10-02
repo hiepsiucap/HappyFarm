@@ -49,6 +49,25 @@ const Chart = () => {
         className=" relative z-1 flex flex-col items-center space-x-4 py-8"
       >
         <div className=" text-xl">So sánh doanh thu các loại trái cây</div>
+        <div className=" flex w-full pr-6 justify-center items-center space-x-2 py-6">
+          <select
+            name=""
+            className=" bg-background shadow-sm py-3 px-6 text-sm border border-primary border-opacity-25 rounded-lg"
+            id=""
+          >
+            <option value="">Dâu Australia</option>
+            <option value="">Buởi Hiệp Đức</option>
+          </select>
+          <div> và</div>
+          <select
+            name=""
+            className=" bg-background shadow-sm py-3 px-6 text-sm border border-primary border-opacity-25 rounded-lg"
+            id=""
+          >
+            <option value="">Dâu Australia</option>
+            <option value="">Buởi Hiệp Đức</option>
+          </select>
+        </div>
         {isLineChartVisible && (
           <BasicLine categories={categories} data={data2} data1={data3} />
         )}
