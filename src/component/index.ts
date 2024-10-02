@@ -13,7 +13,10 @@ import ListOfEvents from "./ListOfEvents";
 import Subscription from "./Subscription";
 import FormRegisterFarmer from "./FormRegisterFarmer";
 import ModalCompo from "./Modal";
+import RecentSubEvent from "./RecentEvent";
 import DetailEventPost from "./DetailEventPost";
 import Post from "./Post";
+import AdminEvent from "./AdminEvent";
 import OrderDetail from "./OrderDetail";
-export {Hero, Post,DetailEventPost,OrderDetail, ModalCompo, FormLogin ,FormRegisterFarmer,ListOfEvents, FormRegister, Footer, ListProject, DetailEvent,Subscription , Project, ScrollToTop ,Filter, ListEvent}
+import RecentSubTable from "./RecentSub";
+export {Hero, Post,DetailEventPost,OrderDetail,RecentSubTable, RecentSubEvent,AdminEvent, ModalCompo, FormLogin ,FormRegisterFarmer,ListOfEvents, FormRegister, Footer, ListProject, DetailEvent,Subscription , Project, ScrollToTop ,Filter, ListEvent}

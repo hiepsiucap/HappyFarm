@@ -21,6 +21,10 @@ import {
   Community,
   Orders,
   PriceTable,
+  Chart,
+  AdminLayout,
+  AdminListEvent,
+  DashBoard,
 } from "./page";
 // import { ScrollToTop } from "./component";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -80,6 +84,24 @@ const router = createBrowserRouter([
       {
         path: "/user/events",
         element: <EventList></EventList>,
+      },
+    ],
+  },
+  {
+    path: "/admin",
+    element: <AdminLayout></AdminLayout>,
+    children: [
+      {
+        path: "/admin/dashboard",
+        element: <DashBoard></DashBoard>,
+      },
+      {
+        path: "/admin/events",
+        element: <AdminListEvent></AdminListEvent>,
+      },
+      {
+        path: "/admin/chart",
+        element: <Chart></Chart>,
       },
     ],
   },

@@ -19,7 +19,7 @@ const PriceTable = () => {
             Các doanh nghiệp nhỏ mới bắt đầu mô hình OCOP,chưa quen thuộc với
             thương mại điện tử và muốn nâng cao hơn nữa khả năng cạnh tranh
           </h3>
-          <div className=" flex flex-col items-start space-y-2">
+          <div className=" flex flex-col items-start space-y-3">
             <p className=" font-semibold text-center">Tính năng</p>
             <div className=" flex space-x-1 items-end text-sm">
               <img src={check} alt="" className=" w-6 h-6" />
@@ -34,7 +34,7 @@ const PriceTable = () => {
               <p className=" font-bold">Tính năng thanh toán.</p>
             </div>
           </div>
-          <div className=" flex flex-col items-start space-y-2">
+          <div className=" flex flex-col items-start space-y-3">
             <p className=" font-semibold text-center">Quyền lợi</p>
             <div className=" flex space-x-1 items-end text-sm">
               <img src={check} alt="" className=" w-6 h-6" />
@@ -69,7 +69,7 @@ const PriceTable = () => {
             Dành cho doanh nghiệp địa phương có nhu cầu mở rộng quy mô và phát
             triển thương hiệu mạnh hơn:
           </h3>
-          <div className=" flex flex-col items-start space-y-2">
+          <div className=" flex flex-col items-start space-y-3">
             <p className=" font-semibold text-center">Tính năng</p>
             <div className=" flex space-x-1 items-end text-sm">
               <img src={check} alt="" className=" w-6 h-6" />
@@ -88,7 +88,7 @@ const PriceTable = () => {
               </p>
             </div>
           </div>
-          <div className=" flex flex-col items-start space-y-2">
+          <div className=" flex flex-col items-start space-y-3">
             <p className=" font-semibold text-center">Quyền lợi</p>
             <div className=" flex space-x-1 items-end text-sm">
               <img src={check} alt="" className=" w-6 h-6" />
@@ -123,7 +123,7 @@ const PriceTable = () => {
             Dành cho những đơn vị có quy mô lớn hơn, đã quen thuộc với thương
             mại điện tử và muốn nâng cao hơn nữa khả năng cạnh tranh
           </h3>
-          <div className=" flex flex-col items-start space-y-2">
+          <div className=" flex flex-col items-start space-y-3">
             <p className=" font-semibold text-center">Tính năng</p>
             <div className=" flex space-x-1 items-end text-sm">
               <img src={check} alt="" className=" w-6 h-6" />
@@ -144,7 +144,7 @@ const PriceTable = () => {
               </p>
             </div>
           </div>
-          <div className=" flex flex-col items-start space-y-2">
+          <div className=" flex flex-col items-start space-y-3">
             <p className=" font-semibold text-center">Quyền lợi</p>
             <div className=" flex space-x-1 items-end text-sm">
               <img src={check} alt="" className=" w-6 h-6" />

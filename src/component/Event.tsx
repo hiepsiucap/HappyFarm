@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 const Event = () => {
   return (
-    <div className="flex items-center justify-between rounded-lg overflow-hidden bg-background  ">
+    <div className="flex items-center justify-between shadow-lg  rounded-lg overflow-hidden bg-background  ">
       <div className="w-1/4 p-2">
         <img
           src="https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727724898/luke-pennystan-09FcOqmi8R0-unsplash_kc6p4n.jpg"
