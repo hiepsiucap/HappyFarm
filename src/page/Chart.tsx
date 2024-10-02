@@ -1,10 +1,59 @@
 /** @format */
-
+import { Basic, BasicBar, BasicLine } from "../component";
+import useIntersectionObserver from "../utilz/Observer";
 const Chart = () => {
+  const isLineChartVisible = useIntersectionObserver();
+  const categories = [
+    "Tháng 1",
+    "Tháng 2",
+    "Tháng 3",
+    "Tháng 4",
+    "Tháng 5",
+    "Tháng 5",
+    "Tháng 6",
+    "Tháng 7",
+    "Tháng 8",
+    "Tháng 9",
+    "Tháng 10",
+    "Tháng 11",
+    "Tháng 12",
+  ];
+  const data = [20, 30, 40, 50, 60];
+  const data2 = [30, 40, 50, 40, 30, 40, 80, 85, 100];
+  const data3 = [30, 40, 50, 25, 70, 40, 80, 60, 90];
+  const cate = [
+    "",
+    "Bưởi da xanh",
+    "Chè thái nguyên",
+    "Sầu riêng Ri6",
+    "Đào Huế",
+    "Nhãn Hưng Yên",
+    "Vãi lồng Nha Trang",
+  ];
+  const data1 = [60, 50, 30, 20, 10, 10, 5];
   return (
-    <>
-      <div className=""></div>
-    </>
+    <section className=" ">
+      <div className=" text-2xl pb-12 ">Thống kê chỉ số</div>
+      <div className=" flex flex-col items-center space-x-4">
+        <div className=" text-xl">Doanh thu theo tháng (triệu đồng)</div>
+        <Basic categories={categories} data={data}></Basic>
+      </div>
+      <div className=" relative z-1 flex flex-col items-center space-x-4 py-8">
+        <div className=" text-xl">
+          Top trái cây có tỉ lệ gọi vốn cao nhất(phần trăm)
+        </div>
+        <BasicBar categories={cate} data={data1}></BasicBar>
+      </div>
+      <div
+        id="line-chart"
+        className=" relative z-1 flex flex-col items-center space-x-4 py-8"
+      >
+        <div className=" text-xl">So sánh doanh thu các loại trái cây</div>
+        {isLineChartVisible && (
+          <BasicLine categories={categories} data={data2} data1={data3} />
+        )}
+      </div>
+    </section>
   );
 };
 export default Chart;

@@ -16,7 +16,7 @@ import { Outlet, Link } from "react-router-dom";
 const AdminLayout = () => {
   return (
     <section className="bg-background  relative bg-opacity-65 font-lexend">
-      <div className=" bg-background shadow-md flex justify-between fixed w-full items-center ">
+      <div className=" bg-background shadow-md flex justify-between z-50 fixed w-full items-center ">
         <Link to="/">
           {" "}
           <img src={logo} alt="" className=" w-32" />
@@ -31,7 +31,7 @@ const AdminLayout = () => {
         </div>
       </div>
       <div className=" flex space-x-12 pt-32 pb-8 px-6">
-        <div className=" w-1/4 overflow-hidden h-screen pr-12 ">
+        <div className=" fixed w-1/4 overflow-hidden h-screen pr-12 ">
           <p className=" font-semibold text-lg">Danh mục</p>
           <div className=" flex w-full flex-col  py-6">
             <Link
@@ -53,7 +53,7 @@ const AdminLayout = () => {
               </div>
             </Link>
             <Link
-              to="/admin/orders"
+              to="/admin/projects"
               className="flex w-full space-x-4 py-4 border-primary border-opacity-35  border-t-2 items-end"
             >
               <img src={order} alt="" className="w-8 h-8 rounded-md" />
@@ -73,7 +73,7 @@ const AdminLayout = () => {
               </div>
             </Link>
             <Link
-              to="/admin/registerproject"
+              to="/registerfarmer"
               className="flex w-full space-x-4 py-4 border-primary border-opacity-35  border-t-2 items-end"
             >
               <img src={project} alt="" className="w-8 h-8 rounded-md" />
@@ -88,6 +88,7 @@ const AdminLayout = () => {
             </Link>
           </div>
         </div>
+        <div className=" w-1/4"></div>
         <div className=" w-3/4 ">
           <Outlet></Outlet>
         </div>

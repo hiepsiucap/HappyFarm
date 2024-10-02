@@ -9,7 +9,7 @@ import { RecentSubTable, RecentSubEvent } from "../component";
 
 const DashBoard = () => {
   return (
-    <section className=" overflow-y-scroll  h-[calc(100vh-64px)] font-lexend">
+    <section className="  font-lexend">
       <div className=" grid grid-flow-row grid-cols-3 grid-rows-2 gap-x-6 gap-y-4">
         <div className=" bg-background border border-button border-opacity-35 rounded-lg shadow-lg p-5">
           <div className=" text-gray-500 text-sm">Số đơn hàng đã giao:</div>

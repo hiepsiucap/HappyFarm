@@ -24,6 +24,7 @@ import {
   Chart,
   AdminLayout,
   AdminListEvent,
+  AdminListProject,
   DashBoard,
 } from "./page";
 // import { ScrollToTop } from "./component";
@@ -99,6 +100,11 @@ const router = createBrowserRouter([
         path: "/admin/events",
         element: <AdminListEvent></AdminListEvent>,
       },
+      {
+        path: "/admin/projects",
+        element: <AdminListProject></AdminListProject>,
+      },
+
       {
         path: "/admin/chart",
         element: <Chart></Chart>,

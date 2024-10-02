@@ -18,5 +18,9 @@ import DetailEventPost from "./DetailEventPost";
 import Post from "./Post";
 import AdminEvent from "./AdminEvent";
 import OrderDetail from "./OrderDetail";
+import AdminProject from "./AdminProject";
+import Basic from "./ApexChart";
+import BasicLine from "./LineChart";
 import RecentSubTable from "./RecentSub";
-export {Hero, Post,DetailEventPost,OrderDetail,RecentSubTable, RecentSubEvent,AdminEvent, ModalCompo, FormLogin ,FormRegisterFarmer,ListOfEvents, FormRegister, Footer, ListProject, DetailEvent,Subscription , Project, ScrollToTop ,Filter, ListEvent}
+import BasicBar from "./BarChat";
+export {Hero,Basic, Post,DetailEventPost,BasicBar,BasicLine,OrderDetail,RecentSubTable,AdminProject, RecentSubEvent,AdminEvent, ModalCompo, FormLogin ,FormRegisterFarmer,ListOfEvents, FormRegister, Footer, ListProject, DetailEvent,Subscription , Project, ScrollToTop ,Filter, ListEvent}

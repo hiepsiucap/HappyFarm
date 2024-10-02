@@ -54,10 +54,14 @@ const FormRegister = () => {
             Đã có tài khoản?
           </Link>
         </div>
-        <div className=" py-6">
-          <button className=" px-6 py-4 rounded-lg w-full  bg-primary text-white font-bold text-sm">
-            Đăng nhập
-          </button>
+
+        <div className=" py-6 flex items-center justify-center ">
+          <Link
+            to="/admin/dashboard"
+            className=" px-6 py-4 rounded-lg  bg-primary text-white font-bold text-sm"
+          >
+            Đăng kí
+          </Link>
         </div>
       </form>
     </section>
