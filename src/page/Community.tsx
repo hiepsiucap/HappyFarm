@@ -99,23 +99,28 @@ const Community = () => {
   ];
   const initallistproject = [
     {
+      id: "1",
       name: " Dự án gọi vốn đầu tư cây dâu giống Australia",
       img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727711973/461481020_328739150328316_8329668403506128640_n_tkxenm.jpg",
     },
     {
+      id: "2",
       name: "  Dự án Trồng Bưởi Da Xanh Vĩnh Long",
       img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727951403/buoi-1_viuegf.jpg",
     },
     {
+      id: "3",
       name: "Dự án  Măng cụt Tươi Đà Lạt",
       img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727951415/mang-cut-1_e84ws3.jpg",
     },
     {
+      id: "4",
       name: "Dự án Trồng Xoài Cát Chu Cao Lãnh",
 
       img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727951502/xoai-cat-chu-soc-trang-2_deqtro.jpg",
     },
     {
+      id: "5",
       name: "Dự án Trồng Xoài Cát Chu Cao Lãnh",
       img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727951443/sau-rieng-4_nusnhb.jpg",
     },
@@ -123,6 +128,7 @@ const Community = () => {
   const [listevent, changelistevent] = useState(initalListEvent);
   const [listproject, changelistproject] = useState(initallistproject);
   const [listpost, changelistpost] = useState(IntialPostType);
+  const [isChoose, changechoose] = useState(initallistproject[0].id);
   return (
     <section className="bg-background  relative bg-opacity-65 font-lexend">
       <div className=" bg-background shadow-md flex justify-between fixed w-full items-center ">
@@ -147,7 +153,17 @@ const Community = () => {
           <div className=" flex w-full flex-col space-y-4 py-6">
             {listproject?.map((project) => {
               return (
-                <div className=" flex justify-between items-center">
+                <button
+                  id={project.id}
+                  onClick={(e) => {
+                    changechoose(e.currentTarget?.id);
+                  }}
+                  className={
+                    isChoose === project.id
+                      ? " flex justify-between items-center bg-background scale-105 p-2 rounded-lg shadow-md"
+                      : " flex justify-between items-center"
+                  }
+                >
                   <div className="flex w-full space-x-2 items-end">
                     <img
                       src={project.img}
@@ -160,7 +176,7 @@ const Community = () => {
                     </div>
                   </div>
                   <div className="p-1.5 rounded-full bg-green-500"></div>
-                </div>
+                </button>
               );
             })}
           </div>

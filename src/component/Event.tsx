@@ -1,39 +1,42 @@
 /** @format */
 import { Link } from "react-router-dom";
-const Event = () => {
+type Event = {
+  name: string;
+  location: string;
+  time: string;
+  description: string;
+  amount: number;
+  img: string;
+};
+const Event = ({ event }: { event: Event }) => {
   return (
     <div className="flex items-center justify-between shadow-lg  rounded-lg overflow-hidden bg-background  ">
       <div className="w-1/4 p-2">
-        <img
-          src="https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727724898/luke-pennystan-09FcOqmi8R0-unsplash_kc6p4n.jpg"
-          alt=""
-          className=" rounded-l-md"
-        />
+        <img src={event.img} alt="" className=" rounded-l-md" />
       </div>
       <div className=" flex flex-col space-y-4 py-4  ">
         <div className="p-5 rounded-xl flex flex-col space-y-2 ">
           <div className=" flex space-x-1 items-end">
             <div className="pb-0.5 text-gray-600 text-sm">Tên Event:</div>
-            <div className=" font-semibold text-primary">
-              {" "}
-              Ngọt Ngào Vị Dâu: Workshop Làm Bánh Từ Dâu Tươi{" "}
-            </div>
+            <div className=" font-semibold text-primary"> {event.name}</div>
           </div>
           <div className=" flex space-x-1 items-end">
             <div className=" text-gray-600 text-sm">Địa điểm:</div>
             <div className=" text-sm font-semibold text-primary">
-              Dĩ An, Bình dương{" "}
+              {event.location}
             </div>
           </div>
           <div className=" flex space-x-1 items-end">
             <div className=" text-gray-600 text-sm">Thời gian:</div>
             <div className=" text-sm font-semibold text-primary">
-              17:00 Ngày 17 tháng 9 năm 2024
+              {event.time}
             </div>
           </div>
           <div className=" flex space-x-1 items-end">
             <div className=" text-gray-600 text-sm">Số người tham gia :</div>
-            <div className=" text-sm font-semibold text-primary">5 người</div>
+            <div className=" text-sm font-semibold text-primary">
+              {event.amount} người
+            </div>
           </div>
         </div>
       </div>
