@@ -175,7 +175,13 @@ const Community = () => {
                       {project.name}
                     </div>
                   </div>
-                  <div className="p-1.5 rounded-full bg-green-500"></div>
+                  <div
+                    className={
+                      isChoose === project.id
+                        ? "p-1.5 rounded-full bg-background"
+                        : "p-1.5 rounded-full bg-green-500"
+                    }
+                  ></div>
                 </button>
               );
             })}
