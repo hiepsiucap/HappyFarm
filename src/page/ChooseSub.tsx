@@ -27,9 +27,9 @@ const ChooseSub = () => {
   const initalsubscription: subscription[] = [
     {
       id: "2",
-      name: "Gói Tiêu chuẩn (Standard)- 200.000VNĐ",
+      name: "Gói cơ bản - Nông sản tươi ngon- 200.000VNĐ",
       customer: "Khách hàng tiêu chuẩn",
-      benefit: "5 kg dâu tươi thu hoạch-Tour thăm quan nông trại",
+      benefit: "5 kg dâu tươi thu hoạch",
       img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727949756/jez-timms-CvBZ3Css97c-unsplash_xfjjk2.jpg",
       amount: 200000,
       description:
@@ -37,23 +37,23 @@ const ChooseSub = () => {
     },
     {
       id: "3",
-      name: "Gói Cao cấp (Premium)- 500.000VNĐ",
+      name: "Gói nâng cao - Chia sẻ yêu thương- 1.000.000VNĐ",
       customer: "Khách hàng cao cấp",
       benefit:
         "10 kg dâu tươi thu hoạch-Tour thăm quan nông trại-Một đêm nghỉ tại trang trại",
       img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727949816/farsai-chaikulngamdee-IdrzXJQlw5w-unsplash_gjiuhl.jpg",
-      amount: 500000,
+      amount: 1000000,
       description:
         "Gói Cao cấp dành cho những ai muốn tận hưởng trải nghiệm nông trại toàn diện với nhiều đặc quyền. Ngoài việc thu hoạch 10 kg dâu tươi, khách hàng còn được thăm quan nông trại và nghỉ lại một đêm để trải nghiệm cuộc sống nông thôn.",
     },
     {
       id: "4",
-      name: "Gói Đặc biệt (Exclusive)- 1.000.000VNĐ",
+      name: "Gói Premium - Trải nghiệm toàn diện- 2.000.000VNĐ",
       customer: "Khách hàng đặc biệt",
       benefit:
         "20 kg dâu tươi thu hoạch-Tour thăm quan nông trại-Hai đêm nghỉ tại trang trại-Suất ăn đặc biệt từ nông sản sạch",
       img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727949793/alison-stevens-Fff5ve-rGVA-unsplash_xinysp.jpg",
-      amount: 1000000,
+      amount: 2000000,
       description:
         "Gói Đặc biệt dành cho những khách hàng có mong muốn đầu tư lớn và tận hưởng nhiều quyền lợi độc đáo. Với gói này, khách hàng sẽ nhận 20 kg dâu tươi, trải nghiệm 2 đêm nghỉ tại nông trại và thưởng thức suất ăn từ nông sản sạch, tự nhiên.",
     },

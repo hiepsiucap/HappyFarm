@@ -15,60 +15,74 @@ const CustomLinearProgress = styled(LinearProgress)({
     backgroundColor: "#1a90ff", // Màu của thanh tiến độ
   },
 });
-const AdminEvent = () => {
+type Event = {
+  name: string;
+  location: string;
+  time: string;
+  timeout: string;
+  minimal: number;
+  current: number;
+  maximum: number;
+  status: string;
+  img: string;
+};
+const AdminEvent = ({ event }: { event: Event }) => {
   return (
-    <div className=" rounded-lg items-center bg-background rounded-lg flex space-x-6 overflow-hidden">
-      <div className="w-64">
-        <img
-          src="https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727711973/461481020_328739150328316_8329668403506128640_n_tkxenm.jpg"
-          alt=""
-          className=" rounded-t-xl h-48 w-64"
-        />
-        <Box sx={{ width: "100%", textAlign: "center" }}>
-          <CustomLinearProgress variant="determinate" value={50} />
-        </Box>
+    <div className=" items-center bg-background rounded-lg flex justify-between space-x-6 overflow-hidden">
+      <div className=" flex space-x-6">
+        <div className="w-64">
+          <img src={event.img} alt="" className=" rounded-t-xl h-48 w-64" />
+          <Box sx={{ width: "100%", textAlign: "center" }}>
+            <CustomLinearProgress variant="determinate" value={50} />
+          </Box>
+        </div>
+        <div className=" rounded-xl flex flex-col space-y-2 ">
+          <div className=" flex space-x-1 items-end">
+            <div className="pb-0.5 text-gray-600 text-sm">Tên Event:</div>
+            <div className=" font-semibold text-primary"> {event.name}</div>
+          </div>
+          <div className=" flex space-x-1 items-end">
+            <div className=" text-gray-600 text-sm">Địa điểm:</div>
+            <div className=" text-sm font-semibold text-primary">
+              {event.location}
+            </div>
+          </div>
+          <div className=" flex space-x-1 items-end">
+            <div className=" text-gray-600 text-sm">Thời gian:</div>
+            <div className=" text-sm font-semibold text-primary">
+              {event.time}
+            </div>
+          </div>
+          <div className=" flex space-x-1 items-end">
+            <div className=" text-gray-600 text-sm">Ngày kết thúc đơn:</div>
+            <div className=" text-sm font-semibold text-primary">
+              {event.timeout}
+            </div>
+          </div>
+          <div className=" flex space-x-1 items-end">
+            <div className=" text-gray-600 text-sm">Số người tối thiểu:</div>
+            <div className=" text-sm font-semibold text-primary">
+              {event.minimal} người
+            </div>
+          </div>
+          <div className=" flex space-x-1 items-end">
+            <div className=" text-gray-600 text-sm">Số người hiện tại :</div>
+            <div className=" text-sm font-semibold text-primary">
+              {event.current} người
+            </div>
+          </div>
+          <div className=" flex space-x-1 items-end">
+            <div className=" text-gray-600 text-sm">Số người tối đa :</div>
+            <div className=" text-sm font-semibold text-primary">
+              {event.maximum} người
+            </div>
+          </div>
+        </div>
       </div>
-      <div className=" rounded-xl flex flex-col space-y-2 ">
-        <div className=" flex space-x-1 items-end">
-          <div className="pb-0.5 text-gray-600 text-sm">Tên Event:</div>
-          <div className=" font-semibold text-primary">
-            {" "}
-            Ngọt Ngào Vị Dâu: Workshop Làm Bánh Từ Dâu Tươi{" "}
-          </div>
-        </div>
-        <div className=" flex space-x-1 items-end">
-          <div className=" text-gray-600 text-sm">Địa điểm:</div>
-          <div className=" text-sm font-semibold text-primary">
-            Dĩ An, Bình dương{" "}
-          </div>
-        </div>
-        <div className=" flex space-x-1 items-end">
-          <div className=" text-gray-600 text-sm">Thời gian:</div>
-          <div className=" text-sm font-semibold text-primary">
-            17:00 Ngày 17 tháng 9 năm 2024
-          </div>
-        </div>
-        <div className=" flex space-x-1 items-end">
-          <div className=" text-gray-600 text-sm">Ngày kết thúc đơn:</div>
-          <div className=" text-sm font-semibold text-primary">
-            17:00 Ngày 15 tháng 9 năm 2024
-          </div>
-        </div>
-        <div className=" flex space-x-1 items-end">
-          <div className=" text-gray-600 text-sm">Số người tối thiểu:</div>
-          <div className=" text-sm font-semibold text-primary">3 người</div>
-        </div>
-        <div className=" flex space-x-1 items-end">
-          <div className=" text-gray-600 text-sm">Số người hiện tại :</div>
-          <div className=" text-sm font-semibold text-primary">5 người</div>
-        </div>
-        <div className=" flex space-x-1 items-end">
-          <div className=" text-gray-600 text-sm">Số người tối đa :</div>
-          <div className=" text-sm font-semibold text-primary">7 người</div>
-        </div>
-      </div>
-      <div className=" flex flex-col items-center space-y-2">
-        <h5 className=" font-semibold text-xl text-green-500">Chưa hết hạn </h5>
+      <div className=" flex flex-col items-center space-y-2 pr-6">
+        <h5 className=" font-semibold text-xl text-green-500">
+          {event.status}{" "}
+        </h5>
         <Link
           to="/project"
           className="px-6 py-2 w-44 text-center text-white text-sm rounded-lg bg-button "

@@ -1,6 +1,77 @@
 /** @format */
+import { useState } from "react";
 import { AdminProject } from "../component";
+type Project = {
+  name: string;
+  farmer: string;
+  time: string;
+  timeout: string;
+  amount: number;
+  percent: number;
+  total: number;
+  current: number;
+  img: string;
+};
+
+const inilistproject: Project[] = [
+  {
+    name: " Dự án gọi vốn đầu tư cây dâu giống Australia",
+    farmer: "Vườn minh Trân",
+    time: "17:00 Ngày 17 tháng 9 năm 2024",
+    timeout: "17:00 Ngày 17 tháng 9 năm 2024",
+    percent: 50,
+    amount: 3,
+    img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727711973/461481020_328739150328316_8329668403506128640_n_tkxenm.jpg",
+    total: 500000,
+    current: 1000000,
+  },
+  {
+    name: "Dự án Trồng Bưởi Da Xanh Vĩnh Long",
+    farmer: "Vườn minh Trân",
+    time: "17:00 Ngày 17 tháng 9 năm 2024",
+    timeout: "17:00 Ngày 17 tháng 9 năm 2024",
+    percent: 50,
+    amount: 3,
+    total: 500000,
+    current: 1000000,
+    img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727951403/buoi-1_viuegf.jpg",
+  },
+  {
+    name: "Dự án Măng cụt Đà Lạt",
+    farmer: "Vườn minh Trân",
+    time: "17:00 Ngày 17 tháng 9 năm 2024",
+    timeout: "17:00 Ngày 17 tháng 9 năm 2024",
+    percent: 50,
+    img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727951415/mang-cut-1_e84ws3.jpg",
+    amount: 3,
+    total: 500000,
+    current: 1000000,
+  },
+  {
+    name: "Dự án Trồng Xoài Cát Chu Cao Lãnh",
+    farmer: "Vườn minh Trân",
+    time: "17:00 Ngày 17 tháng 9 năm 2024",
+    timeout: "17:00 Ngày 17 tháng 9 năm 2024",
+    percent: 50,
+    img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727951502/xoai-cat-chu-soc-trang-2_deqtro.jpg",
+    amount: 3,
+    total: 500000,
+    current: 1000000,
+  },
+  {
+    name: "Dự án Trồng Xoài Cát Chu Cao Lãnh",
+    farmer: "Vườn minh Trân",
+    time: "17:00 Ngày 17 tháng 9 năm 2024",
+    timeout: "17:00 Ngày 17 tháng 9 năm 2024",
+    percent: 50,
+    img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727951443/sau-rieng-4_nusnhb.jpg",
+    amount: 3,
+    total: 500000,
+    current: 1000000,
+  },
+];
 const AdminListProject = () => {
+  const [listproject, updatelist] = useState(inilistproject);
   return (
     <section className=" font-lexend">
       <div className=" flex justify-between items-center">
@@ -10,9 +81,9 @@ const AdminListProject = () => {
         </button>
       </div>
       <div className=" flex flex-col py-8 space-y-4">
-        <AdminProject></AdminProject>
-        <AdminProject></AdminProject>
-        <AdminProject></AdminProject>
+        {listproject.map((project) => {
+          return <AdminProject project={project}></AdminProject>;
+        })}
       </div>
     </section>
   );
