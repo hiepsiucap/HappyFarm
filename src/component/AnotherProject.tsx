@@ -26,7 +26,7 @@ type Project = {
   description: string;
   img: string;
 };
-const Project = ({
+const AnotherProject = ({
   isOpen,
   project,
 }: {
@@ -43,7 +43,7 @@ const Project = ({
         isHovered && !isOpen ? "scale-105 relative z-50 bg-white " : "scale-100"
       }
     >
-      <img src={project.img} alt="" className=" rounded-t-xl" />
+      <img src={project.img} alt="" className=" rounded-t-xl h-64 w-full" />
       <Box sx={{ width: "100%", textAlign: "center" }}>
         <CustomLinearProgress variant="determinate" value={50} />
       </Box>
@@ -100,5 +100,4 @@ const Project = ({
     </Link>
   );
 };
-
-export default Project;
+export default AnotherProject;

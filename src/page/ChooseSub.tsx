@@ -4,6 +4,15 @@ import { Warning } from "../assets/icon";
 import { useEffect, useState } from "react";
 import { Subscription } from "../component";
 import { formatPrice } from "../utilize/Price";
+type subscription = {
+  id: string;
+  name: string;
+  benefit: string;
+  customer: string;
+  img: string;
+  amount: number;
+  description: string;
+};
 const ChooseSub = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -15,8 +24,42 @@ const ChooseSub = () => {
     img: string;
     amount: number;
   }
+  const initalsubscription: subscription[] = [
+    {
+      id: "2",
+      name: "Gói Tiêu chuẩn (Standard)- 200.000VNĐ",
+      customer: "Khách hàng tiêu chuẩn",
+      benefit: "5 kg dâu tươi thu hoạch-Tour thăm quan nông trại",
+      img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727949756/jez-timms-CvBZ3Css97c-unsplash_xfjjk2.jpg",
+      amount: 200000,
+      description:
+        "Gói Tiêu chuẩn dành cho những ai muốn đầu tư nhiều hơn vào dự án nông trại dâu, với nhiều quyền lợi hơn từ việc thu hoạch và thăm quan mô hình nông nghiệp hiện đại. Khách hàng sẽ được trải nghiệm trực tiếp quy trình canh tác và thu hoạch dâu với công nghệ tiên tiến.",
+    },
+    {
+      id: "3",
+      name: "Gói Cao cấp (Premium)- 500.000VNĐ",
+      customer: "Khách hàng cao cấp",
+      benefit:
+        "10 kg dâu tươi thu hoạch-Tour thăm quan nông trại-Một đêm nghỉ tại trang trại",
+      img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727949816/farsai-chaikulngamdee-IdrzXJQlw5w-unsplash_gjiuhl.jpg",
+      amount: 500000,
+      description:
+        "Gói Cao cấp dành cho những ai muốn tận hưởng trải nghiệm nông trại toàn diện với nhiều đặc quyền. Ngoài việc thu hoạch 10 kg dâu tươi, khách hàng còn được thăm quan nông trại và nghỉ lại một đêm để trải nghiệm cuộc sống nông thôn.",
+    },
+    {
+      id: "4",
+      name: "Gói Đặc biệt (Exclusive)- 1.000.000VNĐ",
+      customer: "Khách hàng đặc biệt",
+      benefit:
+        "20 kg dâu tươi thu hoạch-Tour thăm quan nông trại-Hai đêm nghỉ tại trang trại-Suất ăn đặc biệt từ nông sản sạch",
+      img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727949793/alison-stevens-Fff5ve-rGVA-unsplash_xinysp.jpg",
+      amount: 1000000,
+      description:
+        "Gói Đặc biệt dành cho những khách hàng có mong muốn đầu tư lớn và tận hưởng nhiều quyền lợi độc đáo. Với gói này, khách hàng sẽ nhận 20 kg dâu tươi, trải nghiệm 2 đêm nghỉ tại nông trại và thưởng thức suất ăn từ nông sản sạch, tự nhiên.",
+    },
+  ];
   const [choose, changechoose] = useState<ChooseType | null>(null);
-
+  const [subscription, changesubscription] = useState(initalsubscription);
   return (
     <section className="font-lexend md:container mx-auto py-6">
       <div className=" font-lexend py-6">
@@ -24,21 +67,16 @@ const ChooseSub = () => {
       </div>
       <div className=" flex items-center space-x-8">
         <div className=" flex flex-col space-y-5 w-3/4 ">
-          <Subscription
-            onChangeChoose={changechoose}
-            choose={choose}
-            id={"1"}
-          ></Subscription>
-          <Subscription
-            onChangeChoose={changechoose}
-            choose={choose}
-            id={"2"}
-          ></Subscription>
-          <Subscription
-            onChangeChoose={changechoose}
-            choose={choose}
-            id={"3"}
-          ></Subscription>
+          {subscription.map((subscription) => {
+            return (
+              <Subscription
+                onChangeChoose={changechoose}
+                choose={choose}
+                subscription={subscription}
+                id={subscription.id}
+              ></Subscription>
+            );
+          })}
         </div>
         <div className="text-gray-500 text-sm w-1/4 flex flex-col items-center space-y-2 ">
           {choose && (

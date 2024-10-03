@@ -21,7 +21,7 @@ const Hero = () => {
               to="/login"
               className=" p-4  hover:bg-opacity-85 hover:scale-105 px-6  bg-primary font-medium border-primary border-2 text-white rounded-md"
             >
-              Nhận demo
+              Đăng nhập
             </Link>
             <Link
               to="/register"
