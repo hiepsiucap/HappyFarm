@@ -2,13 +2,15 @@
 /** @format */
 import { Hero, ListProject, ListEvent } from "../component";
 import { Link } from "react-router-dom";
+import Chatbot from "../component/ChatBot";
 function HomePage() {
   return (
     <>
       <Hero></Hero>
       <ListProject></ListProject>
       <ListEvent></ListEvent>
-      <div className=" md:container mx-auto flex items-center space-x-6 py-32 ">
+      <Chatbot />
+      <div className=" md:container relative z-50 mx-auto flex items-center space-x-6 py-32 ">
         <div className=" flex flex-col w-1/2 items-start">
           <div className="text-start leading-normal text-3xl font-lexend  ">
             Trở thành <div className="text-primary">đối tác của chúng tôi</div>{" "}
