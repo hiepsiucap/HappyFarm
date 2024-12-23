@@ -34,7 +34,7 @@ const useIntersectionObserver = ({
         observer.unobserve(element); // Ngừng quan sát khi component bị hủy
       }
     };
-  }, [threshold]);
+  }, [id, threshold]);
 
   return isVisible; // Trả về trạng thái hiển thị
 };

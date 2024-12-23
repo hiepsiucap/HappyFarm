@@ -20,13 +20,6 @@ export const formatPrice = (number: number) => {
   return newNumber;
 };
 export function formatDateToCustomString(utcDate: Date) {
-  let utcHours = utcDate.getUTCHours();
-  let utcMinutes = utcDate.getUTCMinutes();
-  let utcSeconds = utcDate.getUTCSeconds();
-  let utcDay = utcDate.getUTCDate();
-  let utcMonth = utcDate.getUTCMonth() + 1; // getUTCMonth() is zero-based
-  let utcYear = utcDate.getUTCFullYear();
-
   // Add 7 hours to the UTC time to convert to HCM time
   let hcmDate = new Date(utcDate.getTime() + 7 * 60 * 60 * 1000);
 

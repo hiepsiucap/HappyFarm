@@ -13,7 +13,7 @@ type subscription = {
   amount: number;
   description: string;
 };
-const ChooseSub = () => {
+const ChooseSubscription = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -27,33 +27,31 @@ const ChooseSub = () => {
   const initalsubscription: subscription[] = [
     {
       id: "2",
-      name: "Gói cơ bản - Nông sản tươi ngon- 200.000VNĐ",
+      name: "Gói đầu tư cơ bản - 10.000.000VNĐ",
       customer: "Khách hàng tiêu chuẩn",
-      benefit: "5 kg dâu tươi thu hoạch",
-      img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1734957187/273950519_1608976776130361_6791349665700536944_n_cglif7.jpg",
-      amount: 200000,
+      benefit: "Nhà đầu tư nhận về tiền đầu tư và lợi nhuận 5.2%  ",
+      img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727949756/jez-timms-CvBZ3Css97c-unsplash_xfjjk2.jpg",
+      amount: 10000000,
       description:
         "Gói Tiêu chuẩn dành cho những ai muốn đầu tư nhiều hơn vào dự án nông trại dâu, với nhiều quyền lợi hơn từ việc thu hoạch và thăm quan mô hình nông nghiệp hiện đại. Khách hàng sẽ được trải nghiệm trực tiếp quy trình canh tác và thu hoạch dâu với công nghệ tiên tiến.",
     },
     {
       id: "3",
-      name: "Gói nâng cao - Chia sẻ yêu thương- 1.000.000VNĐ",
+      name: "Gói đầu tư cơ bản - 30.000.000VNĐ",
       customer: "Khách hàng cao cấp",
-      benefit:
-        "10 kg dâu tươi thu hoạch-Tour thăm quan nông trại-Một đêm nghỉ tại trang trại",
-      img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1734957176/buoi2-17015063444541705915615_kepwy2.webp",
-      amount: 1000000,
+      benefit: "Nhà đầu tư nhận về tiền đầu tư và lợi nhuận 7%  ",
+      img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727949793/alison-stevens-Fff5ve-rGVA-unsplash_xinysp.jpg",
+      amount: 300000000,
       description:
         "Gói Cao cấp dành cho những ai muốn tận hưởng trải nghiệm nông trại toàn diện với nhiều đặc quyền. Ngoài việc thu hoạch 10 kg dâu tươi, khách hàng còn được thăm quan nông trại và nghỉ lại một đêm để trải nghiệm cuộc sống nông thôn.",
     },
     {
       id: "4",
-      name: "Gói Premium - Trải nghiệm toàn diện- 2.000.000VNĐ",
+      name: "Gói Premium - Trải nghiệm toàn diện- 50.000.000VNĐ",
       customer: "Khách hàng đặc biệt",
-      benefit:
-        "20 kg dâu tươi thu hoạch-Tour thăm quan nông trại-Hai đêm nghỉ tại trang trại-Suất ăn đặc biệt từ nông sản sạch",
-      img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1734957167/buoi-da-xanh-giuptang-cuong-suc-de-khang_ji0zwn.jpg",
-      amount: 2000000,
+      benefit: "Nhà đầu tư nhận về tiền đầu tư và lợi nhuận 12%  ",
+      img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727949816/farsai-chaikulngamdee-IdrzXJQlw5w-unsplash_gjiuhl.jpg",
+      amount: 50000000,
       description:
         "Gói Đặc biệt dành cho những khách hàng có mong muốn đầu tư lớn và tận hưởng nhiều quyền lợi độc đáo. Với gói này, khách hàng sẽ nhận 20 kg dâu tươi, trải nghiệm 2 đêm nghỉ tại nông trại và thưởng thức suất ăn từ nông sản sạch, tự nhiên.",
     },
@@ -130,4 +128,4 @@ const ChooseSub = () => {
     </section>
   );
 };
-export default ChooseSub;
+export default ChooseSubscription;

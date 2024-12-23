@@ -2,16 +2,12 @@
 
 /** @format */
 import logo from "../assets/img/logo.png";
-import image3 from "../assets/img/3.png";
-import event from "../assets/img/event.png";
 import order from "../assets/img/order.png";
 import calendar from "../assets/img/caledar.png";
-import fruit from "../assets/img/fruit.png";
 import project from "../assets/img/project.png";
 import chart from "../assets/img/chart.png";
 import dashboard from "../assets/img/dashboard.png";
 import info from "../assets/img/info.png";
-import { DetailEvent, Post, DetailEventPost } from "../component";
 import { Outlet, Link } from "react-router-dom";
 const AdminLayout = () => {
   return (
@@ -19,7 +15,11 @@ const AdminLayout = () => {
       <div className=" bg-background shadow-md flex justify-between z-50 fixed w-full items-center ">
         <Link to="/">
           {" "}
-          <img src={logo} alt="" className=" w-32" />
+          <img
+            src={logo}
+            alt=""
+            className=" w-32"
+          />
         </Link>
         <div className=" flex items-center space-x-2 px-6">
           <p>Hi Hiệp !</p>
@@ -38,25 +38,52 @@ const AdminLayout = () => {
               to="/admin/dashboard"
               className="flex w-full space-x-4 py-4 border-primary border-opacity-35 border-t-2 items-end"
             >
-              <img src={dashboard} alt="" className="w-8 h-8  rounded-md" />
+              <img
+                src={dashboard}
+                alt=""
+                className="w-8 h-8  rounded-md"
+              />
               <div className="font-semibold text-lg   w-2/3"> Tổng quan</div>
+            </Link>
+            <Link
+              to="/user/profile"
+              className="flex w-full space-x-4 py-4 border-primary border-opacity-35 border-t-2 items-end"
+            >
+              <img
+                src={info}
+                alt=""
+                className="w-8 h-8  rounded-md"
+              />
+              <div className="font-semibold text-lg   w-2/3">
+                {" "}
+                Thông tin cá nhân
+              </div>
             </Link>
 
             <Link
               to="/admin/events"
               className="flex w-full space-x-4 py-4 border-primary border-opacity-35 border-t-2 items-end"
             >
-              <img src={calendar} alt="" className="w-8 h-8  rounded-md" />
+              <img
+                src={calendar}
+                alt=""
+                className="w-8 h-8  rounded-md"
+              />
               <div className="font-semibold text-lg   w-2/3">
                 {" "}
                 Danh sách sự kiện
               </div>
             </Link>
+
             <Link
               to="/admin/projects"
               className="flex w-full space-x-4 py-4 border-primary border-opacity-35  border-t-2 items-end"
             >
-              <img src={order} alt="" className="w-8 h-8 rounded-md" />
+              <img
+                src={order}
+                alt=""
+                className="w-8 h-8 rounded-md"
+              />
               <div className="font-semibold text-lg   w-2/3">
                 {" "}
                 Danh sách đầu tư
@@ -66,24 +93,63 @@ const AdminLayout = () => {
               to="/admin/chart"
               className="flex w-full space-x-4 py-4 border-primary border-opacity-35  border-t-2 items-end"
             >
-              <img src={chart} alt="" className="w-8 h-8 rounded-md" />
+              <img
+                src={chart}
+                alt=""
+                className="w-8 h-8 rounded-md"
+              />
               <div className="font-semibold text-lg   w-2/3">
                 {" "}
                 Thống kê chỉ số
               </div>
             </Link>
             <Link
+              to="/admin/currentproject"
+              className="flex w-full space-x-4 py-4 border-primary border-opacity-35  border-t-2 items-end"
+            >
+              <img
+                src={order}
+                alt=""
+                className="w-8 h-8 rounded-md"
+              />
+              <div className="font-semibold text-lg   w-2/3">
+                {" "}
+                D/A thực hiện
+              </div>
+            </Link>
+            <Link
+              to="/admin/disbursement"
+              className="flex w-full space-x-4 py-4 border-primary border-opacity-35  border-t-2 items-end"
+            >
+              <img
+                src={project}
+                alt=""
+                className="w-8 h-8 rounded-md"
+              />
+              <div className="font-semibold text-lg   w-2/3">
+                Yêu cầu giải ngân
+              </div>
+            </Link>
+            <Link
               to="/registerfarmer"
               className="flex w-full space-x-4 py-4 border-primary border-opacity-35  border-t-2 items-end"
             >
-              <img src={project} alt="" className="w-8 h-8 rounded-md" />
+              <img
+                src={project}
+                alt=""
+                className="w-8 h-8 rounded-md"
+              />
               <div className="font-semibold text-lg   w-2/3">Đăng kí dự án</div>
             </Link>
             <Link
               to="/admin/registerproject"
               className="flex w-full space-x-4 py-4 border-primary border-opacity-35  border-t-2 items-end"
             >
-              <img src={info} alt="" className="w-8 h-8 rounded-md" />
+              <img
+                src={info}
+                alt=""
+                className="w-8 h-8 rounded-md"
+              />
               <div className="font-semibold text-lg   w-2/3"> Đăng xuất</div>
             </Link>
           </div>

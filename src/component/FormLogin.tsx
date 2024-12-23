@@ -4,8 +4,15 @@ import logo from "../assets/img/logo.png";
 const FormLogin = () => {
   return (
     <section className=" rounded-md p-4 px-6 pt-10 font-lexend bg-white w-full">
-      <img src={logo} className=" w-48 mx-auto" alt="" />
-      <form action="" className=" space-y-3">
+      <img
+        src={logo}
+        className=" w-48 mx-auto"
+        alt=""
+      />
+      <form
+        action=""
+        className=" space-y-3"
+      >
         <div className=" py-2 flex flex-col space-y-1">
           <label className=" text-sm font-bold text-primary">
             {" "}
@@ -25,7 +32,10 @@ const FormLogin = () => {
         </div>
         <div className=" flex justify-between">
           <div className="">Quên mật khẩu?</div>
-          <Link to="/register" className="">
+          <Link
+            to="/register"
+            className=""
+          >
             Chưa có tài khoản?
           </Link>
         </div>

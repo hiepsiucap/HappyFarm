@@ -1,13 +1,6 @@
 /** @format */
 import { useState } from "react";
-import { DetailEvent, Project } from ".";
-type Event = {
-  name: string;
-  location: string;
-  time: string;
-  description: string;
-  amount: number;
-};
+import { DetailEvent } from ".";
 const ListOfEvents = () => {
   const initalListEvent = [
     {
@@ -47,7 +40,7 @@ const ListOfEvents = () => {
       img: "https://res.cloudinary.com/dhhuv7n0h/image/upload/v1727955341/chris-holder-uY2UIyO5o5c-unsplash_aov73y.jpg",
     },
   ];
-  const [listevent, changelistevent] = useState(initalListEvent);
+  const [listevent] = useState(initalListEvent);
   return (
     <>
       <div className="grid grid-cols-3 py-6 gap-y-16 gap-x-8">

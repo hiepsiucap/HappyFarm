@@ -1,6 +1,5 @@
 /** @format */
-import { FormLogin, FormRegisterFarmer } from "../component";
-import { Link } from "react-router-dom";
+import { FormRegisterFarmer } from "../component";
 import { useEffect } from "react";
 const RegisterFarmer = () => {
   useEffect(() => {

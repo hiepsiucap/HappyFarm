@@ -1,5 +1,4 @@
 /** @format */
-import { Link } from "react-router-dom";
 import { OrderDetail } from "../component";
 type Order = {
   id: string;

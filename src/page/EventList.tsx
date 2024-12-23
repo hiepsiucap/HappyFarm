@@ -48,13 +48,18 @@ const initalListEvent: EventType[] = [
   },
 ];
 const EventList = () => {
-  const [listevent, changelistevent] = useState(initalListEvent);
+  const [listevent] = useState(initalListEvent);
   return (
     <section className=" font-lexend w-full">
       <h1 className=" text-xl">Danh sách đơn hàng</h1>
       <div className=" flex flex-col space-y-4 py-4">
         {listevent.map((event) => {
-          return <Event event={event}></Event>;
+          return (
+            <Event
+              key={event.img}
+              event={event}
+            ></Event>
+          );
         })}
       </div>
     </section>

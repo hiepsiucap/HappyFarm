@@ -11,48 +11,12 @@ import logo from "../assets/img/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = () => {
   const features = [
-    "Tính Năng Phổ Biến",
-    "Tất Cả Sản Phẩm",
-    "Lên Lịch Họp Miễn Phí",
-    "Công Cụ AI Breeze",
-    "Theo Dõi Email",
-    "Viết Nội Dung AI",
-    "Tạo Trang Web AI",
-    "Tiếp Thị Email",
-    "Quản Lý Khách Hàng",
-    "Viết Email AI",
-    "Công Cụ Kinh Doanh Miễn Phí",
-    "Đánh Giá Tìm Kiếm AI",
-    "Tạo Clip",
-    "Đánh Giá Website",
-    "Tạo Persona",
-    "Tạo Chữ Ký Email",
-    "Tạo Nhận Diện Thương Hiệu",
-    "Ý Tưởng Blog",
-    "Mẫu Hóa Đơn",
-    "Mẫu Kinh Doanh",
-    "Tạo Hướng Dẫn",
-    "So Sánh Phần Mềm",
-    "Chợ Mẫu",
-    "Trợ Lý Chiến Dịch",
+    "Trang chủ",
+    "Danh sách dự án đang hiện hữu",
+    "Đăng kí dự án miễn phí",
+    "Báo giá sản phẩm",
   ];
-  const freeTools = [
-    "Công Cụ Miễn Phí",
-    "Xem Tất Cả Công Cụ Kinh Doanh",
-    "Đánh Giá Tìm Kiếm AI",
-    "Tạo Clip",
-    "Đánh Giá Website",
-    "Tạo Persona",
-    "Tạo Chữ Ký Email",
-    "Tạo Nhận Diện Thương Hiệu",
-    "Ý Tưởng Blog",
-    "Mẫu Hóa Đơn",
-    "Mẫu Kinh Doanh",
-    "Tạo Hướng Dẫn",
-    "So Sánh Phần Mềm",
-    "Chợ Mẫu",
-    "Trợ Lý Chiến Dịch",
-  ];
+  const freeTools = ["Danh sách sự kiện", "Xem Tất Cả Thông tin Dự Án"];
   const company = [
     "Về Chúng Tôi",
     "Tuyển Dụng",
@@ -67,7 +31,7 @@ const Footer = () => {
     "Tất Cả Chương Trình",
     "Đối Tác Giải Pháp",
     "Đối Tác Ứng Dụng",
-    "HubSpot cho Startup",
+
     "Liên Kết",
   ];
   const customers = [
@@ -96,7 +60,7 @@ const Footer = () => {
         </div>
         <div className=" border border-slate-300 "></div>
         <div className=" text white font-bold font-lexend">
-          <h4 className=" text-white text-start py-4">Công cụ miễn phí</h4>
+          <h4 className=" text-white text-start py-4">Đầu tư tiện lợi</h4>
           <div className=" grid grid-cols-1 font-lexend gap-x-6">
             {freeTools.map((freeTool) => {
               return (
@@ -174,13 +138,26 @@ const Footer = () => {
           icon={faInstagram}
           className="text-slate-300  w-9 h-9"
         />
-        <FontAwesomeIcon icon={faTiktok} className="text-slate-300  w-9 h-9" />
-        <FontAwesomeIcon icon={faTwitter} className="text-slate-300  w-9 h-9" />
-        <FontAwesomeIcon icon={faYoutube} className="text-slate-300  w-9 h-9" />
+        <FontAwesomeIcon
+          icon={faTiktok}
+          className="text-slate-300  w-9 h-9"
+        />
+        <FontAwesomeIcon
+          icon={faTwitter}
+          className="text-slate-300  w-9 h-9"
+        />
+        <FontAwesomeIcon
+          icon={faYoutube}
+          className="text-slate-300  w-9 h-9"
+        />
         <div className=" border border-slate-300 p-0 w-full h-0"></div>
       </div>
       <div className=" flex items-center justify-center bg-white w-48 mx-auto rounded-xl mt-12">
-        <img src={logo} alt="" className="w-48 " />
+        <img
+          src={logo}
+          alt=""
+          className="w-48 "
+        />
       </div>
     </section>
   );

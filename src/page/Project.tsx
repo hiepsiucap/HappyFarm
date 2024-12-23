@@ -38,11 +38,16 @@ const Project = () => {
             />
           </div>
           <div className=" w-5/12 p-5">
-            <CustomLinearProgress variant="determinate" value={50} />
+            <CustomLinearProgress
+              variant="determinate"
+              value={50}
+            />
             <div className=" flex justify-end font-lexend pt-2 ">
-              1.000.000/2.000.000 VNĐ
+              1.000.000.000/2.000.000.000 VNĐ
             </div>
-            <div className=" text-3xl font-bold font-lexend">1.000.000 VNĐ</div>
+            <div className=" text-3xl font-bold font-lexend">
+              1.000.000.000 VNĐ
+            </div>
             <div className=" text-gray-500 font-lexend pb-6">
               Tổng số tiền kêu gọi được{" "}
             </div>
@@ -52,29 +57,40 @@ const Project = () => {
             </div>
             <div className=" text-3xl font-bold font-lexend">10</div>
             <div className=" text-gray-500 font-lexend pb-6">ngày còn lại </div>
-            <Link
-              to="/projects/:id/subscription"
-              className=" bg-primary px-8 py-4 font-lexend  text-white rounded-xl"
-            >
-              Đầu tư ngay
-            </Link>
+            <div className=" flex space-x-4">
+              <Link
+                to="/crowdproject/subscription/2"
+                className=" bg-primary px-8 py-4 font-lexend  text-white rounded-xl"
+              >
+                Đầu tư ngay
+              </Link>
+            </div>
           </div>
         </div>
         <div className=" flex bg-white">
           <ul className="flex flex-col space-y-4  p-4 pt-14 sticky top-0 z-50">
             <h5 className=" text-green-500 font-bold text-xl ">Đề mục</h5>
             <li>
-              <a href="#gioi-thieu" className="text-green-500 hover:underline">
+              <a
+                href="#gioi-thieu"
+                className="text-green-500 hover:underline"
+              >
                 Giới thiệu
               </a>
             </li>
             <li>
-              <a href="#ly-do" className="text-green-500 hover:underline">
+              <a
+                href="#ly-do"
+                className="text-green-500 hover:underline"
+              >
                 Lý do lựa chọn cây dâu
               </a>
             </li>
             <li>
-              <a href="#muc-tieu" className="text-green-500 hover:underline">
+              <a
+                href="#muc-tieu"
+                className="text-green-500 hover:underline"
+              >
                 Mục tiêu dự án
               </a>
             </li>
@@ -88,7 +104,10 @@ const Project = () => {
             </li>
           </ul>
           <div className=" w-10/12 mx-auto">
-            <h5 id="gioi-thieu" className=" text-2xl p-5 text-center">
+            <h5
+              id="gioi-thieu"
+              className=" text-2xl p-5 text-center"
+            >
               Giới thiệu
             </h5>
             <div>
@@ -100,7 +119,10 @@ const Project = () => {
               vị thơm ngon, phù hợp với nhu cầu tiêu dùng hiện đại về thực phẩm
               sạch, an toàn và giàu dinh dưỡng.
             </div>
-            <h5 id="#ly-do" className=" text-2xl p-5 text-center">
+            <h5
+              id="#ly-do"
+              className=" text-2xl p-5 text-center"
+            >
               Lý do lựa chọn cây dâu giống Australia
             </h5>
             <div>
@@ -116,7 +138,10 @@ const Project = () => {
               alt=""
               className=" p-5"
             />
-            <h5 id="#muc-tieu" className=" text-2xl p-5 text-center">
+            <h5
+              id="#muc-tieu"
+              className=" text-2xl p-5 text-center"
+            >
               Mục tiêu dự án
             </h5>
             <div>
@@ -135,7 +160,10 @@ const Project = () => {
               alt=""
               className=" p-5"
             />
-            <h5 id="keu-goi-dau-tu" className=" text-2xl p-5 text-center">
+            <h5
+              id="keu-goi-dau-tu"
+              className=" text-2xl p-5 text-center"
+            >
               Lời kêu gọi đầu tư
             </h5>
             <div>

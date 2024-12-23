@@ -49,7 +49,11 @@ const Subscription = ({
         </ul>
       </div>
       <div className=" w-1/3">
-        <img src={subscription.img} alt="" className=" rounded-md min-h-48" />
+        <img
+          src={subscription.img}
+          alt=""
+          className=" rounded-md min-h-48"
+        />
       </div>
     </button>
   );

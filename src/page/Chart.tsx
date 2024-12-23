@@ -42,14 +42,20 @@ const Chart = () => {
     <section className=" ">
       <div className=" text-2xl pb-12 ">Thống kê chỉ số</div>
       <div className=" flex flex-col items-center space-x-4">
-        <div className=" text-xl">Doanh thu theo tháng (triệu đồng)</div>
-        <Basic categories={categories} data={data}></Basic>
+        <div className=" text-xl">Số vốn gọi được theo tháng (triệu đồng)</div>
+        <Basic
+          categories={categories}
+          data={data}
+        ></Basic>
       </div>
       <div className=" relative z-1 flex flex-col items-center space-x-4 py-8">
         <div className=" text-xl">
-          Top trái cây có tỉ lệ gọi vốn cao nhất(phần trăm)
+          Top sản phẩm có tỉ lệ gọi vốn cao nhất(triệu động)
         </div>
-        <BasicBar categories={cate} data={data1}></BasicBar>
+        <BasicBar
+          categories={cate}
+          data={data1}
+        ></BasicBar>
       </div>
       <div
         id="line-chart"
@@ -76,7 +82,11 @@ const Chart = () => {
           </select>
         </div>
         {isLineChartVisibleLine && (
-          <BasicLine categories={categories} data={data2} data1={data3} />
+          <BasicLine
+            categories={categories}
+            data={data2}
+            data1={data3}
+          />
         )}
       </div>
       <div
@@ -104,7 +114,12 @@ const Chart = () => {
             <option value="">Buởi Hiệp Đức</option>
           </select>
         </div>
-        {isLineChartVisiblePie && <BasicPie categories={cate} data={data1} />}
+        {isLineChartVisiblePie && (
+          <BasicPie
+            categories={cate}
+            data={data1}
+          />
+        )}
       </div>
     </section>
   );

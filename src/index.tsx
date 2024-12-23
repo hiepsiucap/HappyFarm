@@ -15,6 +15,7 @@ import {
   Project,
   ChooseSub,
   Projects,
+  ChooseSubscription,
   RegisterFarmer,
   UserLayOut,
   Events,
@@ -22,13 +23,17 @@ import {
   Orders,
   PriceTable,
   Chart,
+  CrowdProject,
   AdminLayout,
   AdminListEvent,
+  UserProfileForm,
   AdminListProject,
+  Createdisbursement,
   DashBoard,
 } from "./page";
 // import { ScrollToTop } from "./component";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AmdinCurrentProject from "./page/AdminCurrentProject";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -61,6 +66,14 @@ const router = createBrowserRouter([
         ],
       },
       {
+        path: "/crowdproject/:id",
+        element: <CrowdProject></CrowdProject>,
+      },
+      {
+        path: "/crowdproject/subscription/:id",
+        element: <ChooseSubscription></ChooseSubscription>,
+      },
+      {
         path: "/registerfarmer",
         element: <RegisterFarmer></RegisterFarmer>,
       },
@@ -83,6 +96,10 @@ const router = createBrowserRouter([
         element: <Orders></Orders>,
       },
       {
+        path: "/user/profile",
+        element: <UserProfileForm></UserProfileForm>,
+      },
+      {
         path: "/user/events",
         element: <EventList></EventList>,
       },
@@ -97,14 +114,25 @@ const router = createBrowserRouter([
         element: <DashBoard></DashBoard>,
       },
       {
+        path: "/admin/profile",
+        element: <UserProfileForm></UserProfileForm>,
+      },
+      {
+        path: "/admin/disbursement",
+        element: <Createdisbursement></Createdisbursement>,
+      },
+      {
         path: "/admin/events",
         element: <AdminListEvent></AdminListEvent>,
       },
       {
         path: "/admin/projects",
+        element: <AmdinCurrentProject></AmdinCurrentProject>,
+      },
+      {
+        path: "/admin/currentproject",
         element: <AdminListProject></AdminListProject>,
       },
-
       {
         path: "/admin/chart",
         element: <Chart></Chart>,

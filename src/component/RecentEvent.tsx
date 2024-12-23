@@ -120,7 +120,10 @@ export default function RecentSubEvent() {
     <ThemeProvider theme={theme}>
       <Paper sx={{ width: "100%", overflow: "hidden" }}>
         <TableContainer sx={{ maxHeight: 440 }}>
-          <Table stickyHeader aria-label="sticky table">
+          <Table
+            stickyHeader
+            aria-label="sticky table"
+          >
             <TableHead>
               <TableRow>
                 {columns.map((column) => (
@@ -148,7 +151,10 @@ export default function RecentSubEvent() {
                       {columns.map((column) => {
                         const value = row[column.id];
                         return (
-                          <TableCell key={column.id} align={column.align}>
+                          <TableCell
+                            key={column.id}
+                            align={column.align}
+                          >
                             {column.format && typeof value === "number"
                               ? column.format(value)
                               : value}

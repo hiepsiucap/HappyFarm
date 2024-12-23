@@ -1,5 +1,9 @@
 /** @format */
+
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+
 type Event = {
   name: string;
   location: string;
@@ -8,11 +12,46 @@ type Event = {
   amount: number;
   img: string;
 };
-const Event = ({ event }: { event: Event }) => {
+
+// eslint-disable-next-line @typescript-eslint/no-redeclare
+const Event: React.FC<{ event: Event }> = ({ event }) => {
+  const [isCancelled, setIsCancelled] = useState(false);
+
+  const handleCancel = () => {
+    Swal.fire({
+      title: "Xác nhận hủy tham gia",
+      text: `Bạn có chắc chắn muốn hủy tham gia sự kiện ${event.name}?`,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Hủy tham gia",
+      cancelButtonText: "Quay lại",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Thông báo",
+          text: "Hủy tham gia sự kiện thành công!",
+          icon: "success",
+        }).then(() => {
+          setIsCancelled(true);
+        });
+      }
+    });
+  };
+
   return (
-    <div className="flex items-center justify-between shadow-lg  rounded-lg overflow-hidden bg-background  ">
+    <div
+      className={`flex items-center justify-between shadow-lg  rounded-lg overflow-hidden bg-background ${
+        isCancelled ? "opacity-50 cursor-not-allowed" : ""
+      }`}
+    >
       <div className="w-1/4 p-2">
-        <img src={event.img} alt="" className=" rounded-l-md" />
+        <img
+          src={event.img}
+          alt=""
+          className=" rounded-l-md"
+        />
       </div>
       <div className=" flex flex-col space-y-4 py-4  ">
         <div className="p-5 rounded-xl flex flex-col space-y-2 ">
@@ -47,12 +86,13 @@ const Event = ({ event }: { event: Event }) => {
         >
           Đăng kí thêm
         </Link>
-        <Link
-          to="/project"
+        <button
+          onClick={handleCancel}
+          disabled={isCancelled}
           className="px-6 py-2 w-36 text-center text-white text-sm rounded-lg bg-button "
         >
           Huỷ tham gia
-        </Link>
+        </button>
         <Link
           to="/project"
           className="px-6 py-2 w-36 text-center text-white text-sm rounded-lg bg-button"
@@ -63,4 +103,5 @@ const Event = ({ event }: { event: Event }) => {
     </div>
   );
 };
+
 export default Event;

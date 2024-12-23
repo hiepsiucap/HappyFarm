@@ -24,8 +24,10 @@ type Project = {
   dayback: number;
   percent: number;
   description: string;
+  type: string;
   img: string;
 };
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 const Project = ({
   isOpen,
   project,
@@ -38,19 +40,35 @@ const Project = ({
     <Link
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      to="/projects/1"
+      to={project.type === "funding" ? "/projects/1" : "/crowdproject/1"}
       className={
         isHovered && !isOpen ? "scale-105 relative z-50 bg-white " : "scale-100"
       }
     >
-      <img src={project.img} alt="" className=" rounded-t-xl" />
+      <img
+        src={project.img}
+        alt=""
+        className=" rounded-t-xl"
+      />
+      {project.type === "crowd" && (
+        <div className="  absolute mt-2 top-1 right-1 text-xs rounded-md px-2 py-1 w-fit font-semibold text-white bg-green-900">
+          Gói vốn cộng đồng
+        </div>
+      )}
       <Box sx={{ width: "100%", textAlign: "center" }}>
-        <CustomLinearProgress variant="determinate" value={50} />
+        <CustomLinearProgress
+          variant="determinate"
+          value={50}
+        />
       </Box>
       <div className="flex pt-5 space-x-2">
         <div className=" flex flex-col space-y-1 items-start">
           <div className=" min-w-12 ">
-            <img src={project.img} alt="" className=" w-12 h-12 rounded-full" />
+            <img
+              src={project.img}
+              alt=""
+              className=" w-12 h-12 rounded-full"
+            />
           </div>
         </div>
         <div className=" flex flex-col font-lexend">
@@ -67,9 +85,21 @@ const Project = ({
       </div>
       {isHovered && !isOpen && (
         <div className=" absolute top-0 bg-white p-5 border rounded-lg shadow-md ">
-          <img src={project.img} alt="" className=" rounded-t-xl" />
+          <img
+            src={project.img}
+            alt=""
+            className=" rounded-t-xl"
+          />
+          {project.type === "crowd" && (
+            <div className="  absolute mt-2 top-1 right-1 text-xs rounded-md px-2 py-1 w-fit font-semibold text-white bg-green-900">
+              Gói vốn cộng đồng
+            </div>
+          )}
           <Box sx={{ width: "100%", textAlign: "center" }}>
-            <CustomLinearProgress variant="determinate" value={50} />
+            <CustomLinearProgress
+              variant="determinate"
+              value={50}
+            />
           </Box>
           <div className="flex pt-5 space-x-2">
             <div className=" flex flex-col space-y-1 items-start">

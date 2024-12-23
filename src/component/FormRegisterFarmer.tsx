@@ -1,10 +1,11 @@
 /** @format */
-import { Link } from "react-router-dom";
-import logo from "../assets/img/logo.png";
 const FormRegisterFarmer = () => {
   return (
     <section className=" rounded-lg p-4 px-6  font-lexend bg-white w-3/4">
-      <form action="" className=" space-y-3">
+      <form
+        action=""
+        className=" space-y-3"
+      >
         <div className=" py-2 flex flex-col space-y-1">
           <label className=" text-sm font-bold text-primary">
             {" "}

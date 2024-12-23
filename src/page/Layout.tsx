@@ -15,7 +15,11 @@ const Layout: React.FC = () => {
             <li className=" flex space-x-2 items-center font-medium">
               <Link to="/">
                 {" "}
-                <img src={logo} alt="" className=" w-32" />
+                <img
+                  src={logo}
+                  alt=""
+                  className=" w-32"
+                />
               </Link>
             </li>
             <li className=" flex space-x-2 items-center font-medium">
